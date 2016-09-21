@@ -1,0 +1,291 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Client.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Client.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Client"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Client 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2016",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CLIENT_DIALOG DIALOGEX 0, 0, 429, 347
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Client"
+MENU IDR_MENU_FUN
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_SID,45,26,52,16,ES_CENTER
+    EDITTEXT        IDC_EDIT_SNAME,45,46,52,16,ES_CENTER
+    EDITTEXT        IDC_EDIT_SGENDER,45,69,52,16,ES_CENTER
+    EDITTEXT        IDC_EDIT_COURSEID,159,36,52,16,ES_CENTER
+    EDITTEXT        IDC_EDIT_COUNAME,159,63,52,16,ES_CENTER
+    EDITTEXT        IDC_EDIT_CLASS_ID,270,36,52,16,ES_CENTER
+    EDITTEXT        IDC_EDIT_CLASS_NAME,270,63,52,16,ES_CENTER
+    PUSHBUTTON      "增加",IDC_BTN_INSERT,348,28,45,19
+    PUSHBUTTON      "删除",IDC_BTN_DEL,348,58,45,19
+    DEFPUSHBUTTON   "查询",IDC_BTN_QUERY,348,90,45,19
+    PUSHBUTTON      "修改",IDC_BTN_ALTER,348,118,45,19
+    CONTROL         "List1",IDC_LIST_RESULT,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,20,161,378,164
+    GROUPBOX        "结果",IDC_STATIC,14,150,392,183
+    GROUPBOX        "",IDC_STATIC,15,15,95,80
+    CTEXT           "学号",IDC_STATIC,22,25,19,16,SS_CENTERIMAGE
+    CTEXT           "姓名",IDC_STATIC,22,45,19,16,SS_CENTERIMAGE
+    CTEXT           "性别",IDC_STATIC,22,69,19,16,SS_CENTERIMAGE
+    CTEXT           "班级号",IDC_STATIC,239,36,27,16,SS_CENTERIMAGE
+    CTEXT           "课程号",IDC_STATIC,128,36,26,16,SS_CENTERIMAGE
+    CTEXT           "课程名",IDC_STATIC,128,63,27,16,SS_CENTERIMAGE
+    GROUPBOX        "控制栏",IDC_STATIC,338,15,67,129
+    CTEXT           "提示",IDC_STATIC_TIPS,24,112,294,26,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    GROUPBOX        "提示栏",IDC_STATIC,15,101,312,45
+    CTEXT           "班级名",IDC_STATIC,239,63,27,16,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,124,15,95,80
+    GROUPBOX        "",IDC_STATIC,233,15,95,80
+    CONTROL         "学生",IDC_RADIO_STU,"Button",BS_AUTORADIOBUTTON | 
+                    BS_CENTER | WS_GROUP,21,15,32,10
+    CONTROL         "课程",IDC_RADIO_COURSE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_CENTER,129,15,32,10
+    CONTROL         "班级",IDC_RADIO_CLASS,"Button",BS_AUTORADIOBUTTON | 
+                    BS_CENTER,239,15,32,10
+END
+
+IDD_DLG_CHANGE DIALOG DISCARDABLE  0, 0, 208, 171
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改"
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "原信息",IDC_STATIC,15,7,177,63
+    GROUPBOX        "目标信息",IDC_STATIC,15,75,177,80
+    CTEXT           "学号",IDC_STATIC_ONE,21,23,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ONE,55,23,40,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CTEXT           "姓名",IDC_STATIC_TWO,99,23,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_TWO,133,23,40,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CTEXT           "性别",IDC_STATIC_THREE,21,43,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_THREE,55,43,40,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CTEXT           "班级",IDC_STATIC_FOUR,99,43,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_FOUR,133,43,40,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CTEXT           "学号",IDC_STATIC_ONE2,21,92,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ONE2,55,92,40,14,ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "姓名",IDC_STATIC_TWO2,99,92,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_TWO2,133,92,40,14,ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "性别",IDC_STATIC_THREE2,21,112,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_THREE2,55,112,40,14,ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "班级",IDC_STATIC_FOUR2,99,112,31,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_FOUR2,133,112,40,14,ES_CENTER | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "修改",IDC_BTN_CHANGE,75,134,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Client Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Client\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2016\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Client.EXE\0"
+            VALUE "ProductName", "Client 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 416
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 340
+    END
+
+    IDD_DLG_CHANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_FUN MENU DISCARDABLE 
+BEGIN
+    POPUP "功能"
+    BEGIN
+        MENUITEM "删除",                        IDC_BTN_DEL
+        MENUITEM "修改",                        IDC_BTN_ALTER
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Client(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Client.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

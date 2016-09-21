@@ -17,6 +17,28 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#VC6
+*.exe
+*.obj
+*.sbr
+*.bsc
+*.ilk
+*.pch
+*.pdb
+*.idb
+*.dll
+*.tlh
+*.tli
+*.res
+*.ncb
+*.plg
+*.opt
+*.bat
+
+
+#个人信息
+CR23*.rar
+
 # =========================
 # Operating System Files
 # =========================
@@ -45,3 +67,15 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+工作日志 - 2016-9-2 .doc
+时间分配表 - 2016-9-6（New）.xls
+二阶段项目要求.doc
+*.chw
+*.zip
+6.Test/CR22_蔡永飞_20160906.rar
+6.Test/CR24_陈思宇_20160908.rar
+6.Test/MD5.txt
+6.Test/项目.rar
+6.Test/日报表.txt
+Over.rar

@@ -1,0 +1,27 @@
+// LoginCmd.cpp: implementation of the CLoginCmd class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "LoginCmd.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CLoginCmd::CLoginCmd()
+{
+
+}
+
+CLoginCmd::~CLoginCmd()
+{
+
+}
+
+BOOL CLoginCmd::CmdExecute()
+{
+    TRACE("%d£ºExec CLoginCmd", GetCurrentThreadId());
+    Sleep(200);
+    return TRUE;
+}

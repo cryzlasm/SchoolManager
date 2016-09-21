@@ -1,0 +1,27 @@
+// MsgCmd.cpp: implementation of the CMsgCmd class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "MsgCmd.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CMsgCmd::CMsgCmd()
+{
+
+}
+
+CMsgCmd::~CMsgCmd()
+{
+
+}
+
+BOOL CMsgCmd::CmdExecute()
+{
+    TRACE("%d£ºExec CMsgCmd", GetCurrentThreadId());
+    Sleep(200);
+    return TRUE;
+}

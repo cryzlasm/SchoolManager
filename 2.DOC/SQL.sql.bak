@@ -1,0 +1,64 @@
+-创建School
+CREATE DATABASE School
+
+--使用School
+use School
+
+--创建 t_class
+CREATE TABLE t_Class
+(
+    cID     varchar(50)     PRIMARY key,    --班级ID
+    cName   varchar(50)     NOT NULL        --班级名
+)
+
+--创建 t_student
+CREATE TABLE t_Student
+(
+    sID     varchar(50)     PRIMARY key,                        --瀛︾敓ID
+    sName   varchar(50)     NOT NULL,                           --瀛︾敓鍚?
+    sGender varchar(50)     NOT NULL DEFAULT 'UnKnow',          --瀛︾敓鎬у埆
+    --sBirth  datetime        NOT NULL DEFAULT '1970/1/1',        --瀛︾敓鐢熸棩
+    cID     varchar(50)     FOREIGN KEY REFERENCES t_Class(cID) --鐝骇琛ㄥ閿?鐝骇ID
+)
+
+--创建 t_course
+CREATE TABLE t_Course
+(
+    couID   varchar(50)     PRIMARY key,    --璇剧▼ID
+    couName varchar(50)     NOT NULL        --璇剧▼鍚?
+)
+
+--创建 t_select_course
+CREATE TABLE t_Select_Course
+(
+    sID     varchar(50)     FOREIGN KEY REFERENCES t_Student(sID),      --学生ID
+    couID   varchar(50)     FOREIGN KEY REFERENCES t_Course(couID),     --课程ID
+    --Score   float           NOT NULL,                                   --璇剧▼鎴愮哗
+    PRIMARY key(sID, couID)                                             --璁剧疆 澶嶅悎涓婚敭
+)
+
+--插入记录
+insert into t_Class (cID, cName) values('cr01', '科锐1班')
+insert into t_Class (cID, cName) values('cr02', '科锐2班')
+insert into t_Class (cID, cName) values('cr03', '科锐3班')
+insert into t_Class (cID, cName) values('cr04', '科锐4班')
+
+
+insert into t_Student (sID, sName, sGender, cID) values('s001', '张三', '男', 'cr01')
+insert into t_Student (sID, sName, sGender, cID) values('s002', '李四', '男', 'cr01')
+insert into t_Student (sID, sName, sGender, cID) values('s003', '王五', '男', 'cr02')
+insert into t_Student (sID, sName, sGender, cID) values('s004', '李流', '男', 'cr03')
+
+
+insert into t_Course (couID, couName) values('cou01', 'c语言')
+insert into t_Course (couID, couName) values('cou02', 'c++')
+insert into t_Course (couID, couName) values('cou03', '数据结构')
+insert into t_Course (couID, couName) values('cou04', 'JAVA')
+
+insert into t_Select_Course (sID, couID) values('s001', 'cou01')
+insert into t_Select_Course (sID, couID) values('s002', 'cou01')
+insert into t_Select_Course (sID, couID) values('s002', 'cou02')
+insert into t_Select_Course (sID, couID) values('s003', 'cou01')
+insert into t_Select_Course (sID, couID) values('s003', 'cou02')
+insert into t_Select_Course (sID, couID) values('s003', 'cou03')
+insert into t_Select_Course (sID, couID) values('s003', 'cou04')
